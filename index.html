@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Иван Мысков — Портфолио</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome для иконок (опционально) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Привет, я Иван!</h1>
@@ -12,52 +14,76 @@
     <p>Я начинающий веб-разработчик, создаю полезные и красивые проекты.</p>
     
     <h2>Мои проекты</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Название</th>
-                <th>Описание</th>
-                <th>Стек</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Сайт-портфолио</strong></td>
-                <td>Персональный сайт-визитка на GitHub Pages с адаптивным дизайном</td>
-                <td>HTML, CSS, GitHub Actions</td>
-            </tr>
-            <tr>
-                <td><strong>Telegram-бот для расходов</strong></td>
-                <td>Бот для учёта личных финансов с интеграцией Google Sheets</td>
-                <td>Python, python-telegram-bot, Google API</td>
-            </tr>
-            <tr>
-                <td><strong>Анализатор данных CSV</strong></td>
-                <td>Скрипт для очистки и визуализации данных из CSV-файлов</td>
-                <td>Python, Pandas, Matplotlib</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Стек технологий</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://github.com/ivanmyskov89-beep/Case_study" target="_blank" class="project-link">
+                            <strong>🌐 Сайт-портфолио</strong>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i>
+                        </a>
+                    </td>
+                    <td>Персональный сайт-визитка на GitHub Pages с адаптивным дизайном</td>
+                    <td>HTML, CSS, GitHub Actions</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" target="_blank" class="project-link" style="opacity: 0.7;">
+                            <strong>🤖 Telegram-бот для расходов</strong>
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <br><small style="color: #666;">(в разработке)</small>
+                    </td>
+                    <td>Бот для учёта личных финансов с интеграцией Google Sheets</td>
+                    <td>Python, python-telegram-bot, Google API</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" target="_blank" class="project-link" style="opacity: 0.7;">
+                            <strong>📊 Анализатор данных CSV</strong>
+                            <i class="fas fa-chart-line"></i>
+                        </a>
+                        <br><small style="color: #666;">(в разработке)</small>
+                    </td>
+                    <td>Скрипт для очистки и визуализации данных из CSV-файлов</td>
+                    <td>Python, Pandas, Matplotlib</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
     <h2>Навыки</h2>
     <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">Git</span>
-        <span class="skill">GitHub Actions</span>
+        <span class="skill">🐍 Python</span>
+        <span class="skill">🌐 HTML5</span>
+        <span class="skill">🎨 CSS3</span>
+        <span class="skill">🐙 Git</span>
+        <span class="skill">⚙️ GitHub Actions</span>
+        <span class="skill">🤖 Telegram API</span>
     </div>
     
     <h2>Контакты</h2>
     <div class="contact-links">
-        <p>📧 Email: ivan.myskov.89@gmail.com</p>
-        <p>💬 Telegram: @ivanmyskov</p>
-        <p>🐙 GitHub: ivanmyskov89-beep</p>
+        <p>📧 Email: <a href="mailto:ivan.myskov.89@gmail.com">ivan.myskov.89@gmail.com</a></p>
+        <p>💬 Telegram: <a href="https://t.me/ivanmyskov" target="_blank">@ivanmyskov</a></p>
+        <p>🐙 GitHub: <a href="https://github.com/ivanmyskov89-beep" target="_blank">ivanmyskov89-beep</a></p>
     </div>
     
     <blockquote>
         "Учиться никогда не поздно!"
     </blockquote>
+    
+    <footer style="text-align: center; margin-top: 3rem; padding: 1rem; color: #666; font-size: 0.8rem;">
+        © 2026 Иван Мысков | Сделано с ❤️ на GitHub Pages
+    </footer>
 </body>
 </html>
 
