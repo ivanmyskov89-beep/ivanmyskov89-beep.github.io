@@ -1,4 +1,69 @@
+/* ===== ФОТО ПРОФИЛЯ ===== */
+.profile-photo {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3b82f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.02);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ===== ОБЩИЕ СТИЛИ (если их нет) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* Заголовки */
+h1 {
+    color: #0f172a;
+    font-size: 2.5rem;
+    margin: 1rem 0 0.5rem 0;
+    text-align: center;
+}
+
+h2 {
+    color: #334155;
+    font-size: 1.8rem;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+}
+
 /* Стили для таблицы */
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -14,6 +79,7 @@ th {
     color: white;
     padding: 0.75rem;
     text-align: left;
+    font-weight: 600;
 }
 
 td {
@@ -21,7 +87,24 @@ td {
     padding: 0.75rem;
 }
 
-/* Стили для навыков */
+tr:hover {
+    background: #f8fafc;
+}
+
+/* Стили для ссылок проектов */
+.project-link {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* Навыки */
 .skills {
     display: flex;
     gap: 0.7rem;
@@ -31,12 +114,14 @@ td {
 
 .skill {
     background: #e2e8f0;
+    color: #1e293b;
     padding: 0.3rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
-/* Стили для контактов */
+/* Контакты */
 .contact-links {
     background: #f1f5f9;
     padding: 1rem;
@@ -44,10 +129,33 @@ td {
     margin: 1rem 0;
 }
 
+.contact-links a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Цитата */
 blockquote {
     background: #f1f5f9;
     border-left: 4px solid #3b82f6;
     margin: 1.5rem 0;
     padding: 1rem;
     font-style: italic;
+    color: #475569;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Параграфы */
+p {
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+/* Футер */
+footer {
+    border-top: 1px solid #e2e8f0;
 }
