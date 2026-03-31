@@ -8,7 +8,7 @@
     <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Дополнительные стили для бота */
+        /* Дополнительные стили */
         .project-badge {
             display: inline-block;
             background: #28a745;
@@ -18,6 +18,10 @@
             border-radius: 12px;
             margin-left: 8px;
             vertical-align: middle;
+        }
+        
+        .project-badge.ip {
+            background: #667eea;
         }
         
         .project-demo {
@@ -61,6 +65,93 @@
             border-radius: 12px;
             font-size: 0.7rem;
         }
+        
+        /* Стили для карточки проекта IP Detector */
+        .ip-detector-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .ip-detector-card h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .ip-detector-card .tech-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .ip-detector-card .repo-stats {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .ip-detector-card a {
+            color: white;
+        }
+        
+        .ip-detector-card .btn-light {
+            background: white;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        .ip-detector-card .btn-light:hover {
+            background: #f0f0f0;
+        }
+        
+        .ip-detector-card .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .ip-detector-card .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0;
+        }
+        
+        .feature-list li {
+            margin: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .demo-code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +163,63 @@
     <p>Я начинающий веб-разработчик, создаю полезные и красивые проекты.</p>
     
     <h2>Мои проекты</h2>
+    
+    <!-- Карточка проекта IP Detector (выделенная) -->
+    <div class="ip-detector-card">
+        <h3>📍 IP Detector <span class="project-badge" style="background: rgba(255,255,255,0.3);">⭐ Ключевой проект</span></h3>
+        <p><strong>Профессиональный инструмент для определения геолокации по IP-адресу</strong> с автоматической загрузкой результатов в облачное хранилище.</p>
+        
+        <ul class="feature-list">
+            <li>🔍 Определение публичного IP через ipify.org</li>
+            <li>🌍 Получение геоданных (город, страна, координаты) через ipinfo.io</li>
+            <li>☁️ Автоматическая загрузка JSON-результатов на Яндекс.Диск</li>
+            <li>💻 Три интерфейса: CLI, Web, REST API</li>
+            <li>🐳 Docker контейнеризация</li>
+            <li>📊 Подробное логирование с Loguru</li>
+            <li>🧪 Юнит-тесты с покрытием 85%</li>
+        </ul>
+        
+        <div class="demo-code">
+            $ python cli.py --verbose<br>
+            ==================================================<br>
+            IP Detector v2.0 - Определение геолокации по IP<br>
+            ==================================================<br>
+            [1/4] Определение IP-адреса...<br>
+                   ✓ Ваш IP-адрес: 95.73.190.48<br>
+            [2/4] Получение геолокации по IP...<br>
+                   ✓ Город: Moscow<br>
+                   ✓ Страна: RU<br>
+            ✅ Программа выполнена успешно!
+        </div>
+        
+        <div class="tech-stack" style="margin: 15px 0;">
+            <span class="tech-tag">Python 3.11</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Requests</span>
+            <span class="tech-tag">Loguru</span>
+            <span class="tech-tag">Click</span>
+            <span class="tech-tag">Pytest</span>
+        </div>
+        
+        <div class="repo-stats">
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fas fa-globe"></i> Flask</span>
+            <span><i class="fab fa-docker"></i> Docker</span>
+            <span><i class="fas fa-chart-line"></i> 85% coverage</span>
+        </div>
+        
+        <div style="margin-top: 15px;">
+            <a href="https://github.com/ivanmyskov89-beep/ip-detector" target="_blank" class="btn-light">
+                <i class="fab fa-github"></i> GitHub репозиторий
+            </a>
+            <a href="https://ivanmyskov89-beep.github.io/projects/ip-detector/" target="_blank" class="btn-outline">
+                <i class="fas fa-info-circle"></i> Подробнее о проекте
+            </a>
+        </div>
+    </div>
+    
     <div class="table-container">
         <table>
             <thead>
@@ -121,6 +269,33 @@
                         </div>
                     </td>
                     <td>Python, python-telegram-bot, Pillow, Docker, GitHub Actions</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://github.com/ivanmyskov89-beep/ip-detector" target="_blank" class="project-link">
+                            <strong>📍 IP Detector</strong>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i>
+                        </a>
+                        <span class="project-badge ip">⭐ Профессиональный</span>
+                        <div class="repo-stats">
+                            <span><i class="fas fa-code"></i> CLI + Web</span>
+                            <span><i class="fas fa-database"></i> 3 API</span>
+                            <span><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                    </td>
+                    <td>
+                        <strong>Инструмент для определения геолокации по IP-адресу</strong><br>
+                        🔍 Определяет IP → 🌍 Получает геоданные → 📁 Сохраняет в JSON → ☁️ Загружает на Яндекс.Диск<br>
+                        <strong>Особенности:</strong> CLI интерфейс, веб-интерфейс на Flask, REST API, Docker, логирование, тесты
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Loguru</span>
+                            <span class="tech-tag">Click</span>
+                            <span class="tech-tag">Pytest</span>
+                        </div>
+                    </td>
+                    <td>Python, Flask, Requests, Docker, Yandex.Disk API</td>
                 </tr>
                 <tr>
                     <td>
@@ -192,6 +367,8 @@
         <span class="skill">🤖 Telegram API</span>
         <span class="skill">🐳 Docker</span>
         <span class="skill">📦 Pillow</span>
+        <span class="skill">🌍 REST API</span>
+        <span class="skill">📊 Flask</span>
     </div>
     
     <h2>Контакты</h2>
