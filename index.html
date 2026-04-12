@@ -152,6 +152,49 @@
             overflow-x: auto;
             margin: 10px 0;
         }
+        
+        /* Стили для карточки AI Image Bot */
+        .ai-bot-card {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        .ai-bot-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .ai-bot-card .btn-light {
+            background: white;
+            color: #11998e;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .ai-bot-card .btn-light:hover {
+            background: #f0f0f0;
+        }
+        .ai-bot-card .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .ai-bot-card .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .ai-bot-card .tech-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -242,33 +285,33 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="https://github.com/ivanmyskov89-beep/telegram-meme-bot" target="_blank" class="project-link">
-                            <strong>🎨 Telegram Meme Bot</strong>
+                        <a href="https://github.com/ivanmyskov89-beep/telegram-ai-image-bot" target="_blank" class="project-link">
+                            <strong>🎨 AI Image Bot</strong>
                             <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i>
                         </a>
-                        <span class="project-badge">✅ Готов</span>
+                        <span class="project-badge">⭐ Новинка</span>
                         <div class="project-demo">
-                            <a href="https://t.me/your_bot_username" target="_blank">
+                            <a href="https://t.me/my_supers_image_bot" target="_blank">
                                 <i class="fab fa-telegram"></i> Попробовать бота
                             </a>
                         </div>
                         <div class="repo-stats">
                             <span><i class="fab fa-python"></i> Python</span>
-                            <span><i class="fas fa-image"></i> Pillow</span>
-                            <span><i class="fab fa-docker"></i> Docker</span>
+                            <span><i class="fas fa-robot"></i> aiogram</span>
+                            <span><i class="fas fa-star"></i> Stars API</span>
                         </div>
                     </td>
                     <td>
-                        <strong>Telegram-бот для добавления подписей к картинкам</strong><br>
-                        📸 Отправляешь фото → 🎲 Бот выбирает случайную подпись → ✍️ Добавляет её на изображение → 📤 Отправляет обратно → 📢 Можно поделиться в канале
+                        <strong>Telegram-бот для генерации изображений по тексту</strong><br>
+                        ✍️ Отправляешь описание → 🎨 Нейросеть генерирует картинку → 📤 Бот отправляет готовое изображение → ⭐ Есть бесплатные лимиты и платные подписки через Telegram Stars
                         <div class="tech-stack">
-                            <span class="tech-tag">python-telegram-bot</span>
+                            <span class="tech-tag">aiogram 3.x</span>
+                            <span class="tech-tag">Pollinations.ai API</span>
+                            <span class="tech-tag">Telegram Stars API</span>
                             <span class="tech-tag">Pillow</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">GitHub Actions</span>
                         </div>
-                    </td>
-                    <td>Python, python-telegram-bot, Pillow, Docker, GitHub Actions</td>
+                     </td>
+                    <td>Python, aiogram, Pollinations.ai API, Telegram Stars API, Pillow</td>
                 </tr>
                 <tr>
                     <td>
@@ -282,7 +325,7 @@
                             <span><i class="fas fa-database"></i> 3 API</span>
                             <span><i class="fab fa-docker"></i> Docker</span>
                         </div>
-                    </td>
+                     </td>
                     <td>
                         <strong>Инструмент для определения геолокации по IP-адресу</strong><br>
                         🔍 Определяет IP → 🌍 Получает геоданные → 📁 Сохраняет в JSON → ☁️ Загружает на Яндекс.Диск<br>
@@ -294,7 +337,7 @@
                             <span class="tech-tag">Click</span>
                             <span class="tech-tag">Pytest</span>
                         </div>
-                    </td>
+                     </td>
                     <td>Python, Flask, Requests, Docker, Yandex.Disk API</td>
                 </tr>
                 <tr>
@@ -304,7 +347,7 @@
                             <i class="fas fa-code"></i>
                         </a>
                         <br><small style="color: #666;">(в разработке)</small>
-                    </td>
+                     </td>
                     <td>Бот для учёта личных финансов с интеграцией Google Sheets</td>
                     <td>Python, python-telegram-bot, Google API</td>
                 </tr>
@@ -315,7 +358,7 @@
                             <i class="fas fa-chart-line"></i>
                         </a>
                         <br><small style="color: #666;">(в разработке)</small>
-                    </td>
+                     </td>
                     <td>Скрипт для очистки и визуализации данных из CSV-файлов</td>
                     <td>Python, Pandas, Matplotlib</td>
                 </tr>
@@ -325,25 +368,34 @@
     
     <h2>📱 Мои Telegram-боты</h2>
     <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
-        <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 12px;">
-            <h3 style="margin-top: 0;">🎨 Meme Caption Bot</h3>
-            <p style="margin: 10px 0;">Добавляет случайные подписи к вашим фотографиям</p>
+        <div style="flex: 1; min-width: 280px;" class="ai-bot-card">
+            <h3 style="margin-top: 0;">🎨 AI Image Bot</h3>
+            <p style="margin: 10px 0;">Генерирует уникальные изображения по текстовому описанию с помощью нейросети</p>
             <p><strong>Как работает:</strong></p>
-            <ol style="margin: 10px 0 10px 20px; font-size: 0.9rem;">
-                <li>📸 Отправляете фото боту</li>
-                <li>🎲 Бот выбирает случайную подпись</li>
-                <li>✍️ Добавляет подпись на фото</li>
-                <li>📤 Возвращает обработанное изображение</li>
-                <li>📢 Можно поделиться в канале</li>
-            </ol>
+            <ul style="margin: 10px 0 10px 20px; font-size: 0.9rem;">
+                <li>✍️ Отправляете текстовое описание боту</li>
+                <li>🎨 Нейросеть Pollinations.ai генерирует изображение</li>
+                <li>⭐ Есть бесплатные попытки (5 в день)</li>
+                <li>💎 Платные подписки через Telegram Stars (больше генераций, безлимит)</li>
+                <li>📤 Бот отправляет готовую картинку обратно</li>
+            </ul>
+            <p><strong>Ключевая особенность:</strong> Полностью автоматическая монетизация — пользователи могут покупать генерации прямо в Telegram.</p>
+            <div class="tech-stack" style="margin: 15px 0;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">aiogram</span>
+                <span class="tech-tag">Pollinations.ai API</span>
+                <span class="tech-tag">Telegram Stars API</span>
+                <span class="tech-tag">Pillow</span>
+            </div>
             <div style="margin-top: 15px;">
-                <a href="https://t.me/your_bot_username" target="_blank" style="display: inline-block; background: #0088cc; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-right: 10px;">
+                <a href="https://t.me/my_supers_image_bot" target="_blank" class="btn-light">
                     <i class="fab fa-telegram"></i> Открыть бота
                 </a>
-                <a href="https://github.com/ivanmyskov89-beep/telegram-meme-bot" target="_blank" style="display: inline-block; background: #24292e; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none;">
+                <a href="https://github.com/ivanmyskov89-beep/telegram-ai-image-bot" target="_blank" class="btn-outline">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">✅ Статус: Работает, интегрирована платёжная система</p>
         </div>
         
         <div style="flex: 1; min-width: 250px; background: #f8f9fa; padding: 20px; border-radius: 12px; opacity: 0.7;">
@@ -365,6 +417,8 @@
         <span class="skill">🐙 Git</span>
         <span class="skill">⚙️ GitHub Actions</span>
         <span class="skill">🤖 Telegram API</span>
+        <span class="skill">⭐ Telegram Stars API</span>
+        <span class="skill">🧠 AI Image Generation</span>
         <span class="skill">🐳 Docker</span>
         <span class="skill">📦 Pillow</span>
         <span class="skill">🌍 REST API</span>
